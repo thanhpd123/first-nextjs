@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import Link from 'next/link'
 export default function Home() {
 	return (
 		/*		<main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -113,13 +113,13 @@ export default function Home() {
 		<div>
 			<ul>
 				<li>
-					<a href='/facebook'>FaceBook</a>
+					<Link href='/facebook'>FaceBook</Link>
 				</li>
 				<li style={{ margin: "20px 0" }}>
-					<a href='/youtube'>Youtube</a>
+					<Link href='/youtube'>Youtube</Link>
 				</li>
 				<li>
-					<a href='/tiktok'>Tik Tok</a>
+					<Link href='/tiktok'>Tik Tok</Link>
 				</li>
 			</ul>
 		</div>
