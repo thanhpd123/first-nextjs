@@ -1,5 +1,6 @@
 'use client'
 
+import Container from 'react-bootstrap/Container';
 import Image from 'next/image'
 import Link from 'next/link'
 import x from '@/styles/app.module.css'
@@ -116,21 +117,23 @@ export default function Home() {
 					</div>
 				</main> */
 
-		<div>
-			<ul>
-				<li className={x['red']}>
-					<span className={y['red']}><Link href='/facebook' className={x['green']}>FaceBook</Link></span>
-				</li>
-				<li style={{ margin: "2spx 0" }}>
-					<Link href='/youtube'>Youtube</Link>
-				</li>
-				<li>
-					<Link href='/tiktok'>Tik Tok</Link>
-				</li>
-				<li style={{ margin: "20px 0" }}>
-					<Link href='/dashboard'>Dash Board</Link>
-				</li>
-			</ul>
-		</div>
+		<Container>
+			<div>
+				<ul>
+					<li className={x['red']}>
+						<span className={y['red']}><Link href='/facebook' className={x['green']}>FaceBook</Link></span>
+					</li>
+					<li style={{ margin: "2spx 0" }}>
+						<Link href='/youtube'>Youtube</Link>
+					</li>
+					<li>
+						<Link href='/tiktok'>Tik Tok</Link>
+					</li>
+					<li style={{ margin: "20px 0" }}>
+						<Link href='/dashboard'>Dash Board</Link>
+					</li>
+				</ul>
+			</div>
+		</Container>
 	)
 }
