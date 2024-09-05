@@ -6,6 +6,7 @@ import Link from 'next/link'
 import x from '@/styles/app.module.css'
 import y from '@/styles/testappcss.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AppTable from './components/app.table';
 
 export default function Home() {
 	return (
@@ -123,7 +124,7 @@ export default function Home() {
 					<li className={x['red']}>
 						<span className={y['red']}><Link href='/facebook' className={x['green']}>FaceBook</Link></span>
 					</li>
-					<li style={{ margin: "2spx 0" }}>
+					<li style={{ margin: "20px 0" }}>
 						<Link href='/youtube'>Youtube</Link>
 					</li>
 					<li>
@@ -134,6 +135,7 @@ export default function Home() {
 					</li>
 				</ul>
 			</div>
+			<AppTable />
 		</Container>
 	)
 }
