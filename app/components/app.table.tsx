@@ -1,38 +1,44 @@
 'use client'
 
 import Table from 'react-bootstrap/Table';
-const AppTable = () => {
+import { Button } from 'react-bootstrap';
+
+interface IProps {
+    blogs: IBlog[]
+}
+
+const AppTable = (props: IProps) => {
+    const { blogs } = props;
+    console.log(">>> check blogs", props)
     return (
         <Table bordered hover size='sm'>
             <thead>
                 <tr>
-                    <td>#</td>
-                    <td>First Name</td>
-                    <td>Last Name</td>
-                    <td>User Name</td>
+                    <td>No</td>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Content</td>
+                    <td>Action</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Jacob</td>
-                    <td>Thorton</td>
-                    <td>@fat</td>
-                </tr>
+                {blogs?.map(blog => {
+                    return (
+                        <tr key={blog.id}>
+                            <td>{blog.id}</td>
+                            <td>{blog.title}</td>
+                            <td>{blog.author}</td>
+                            <td>{blog.content}</td>
+                            <td>
+                                <Button>View</Button>
+                                <Button variant='success'>Edit</Button>
+                                <Button variant='danger'>Delete</Button>
+                            </td>
+                        </tr>
+                    )
+                })}
             </tbody>
-        </Table>
+        </Table >
     );
 }
 

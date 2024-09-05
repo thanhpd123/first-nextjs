@@ -10,7 +10,7 @@ const AppFooter = () => {
                 padding: '10px 0',
                 textAlign: 'center',
                 color: 'orangered'
-            }}>Footer with reactjs by Thanh</div>
+            }}>Footer with nextjs by Thanh</div>
         </Container>
     );
 }

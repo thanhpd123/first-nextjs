@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'next/image';
+import Link from 'next/link';
 import style from '@styles/testappcss.module.css';
 
 const AppHeader = () => {
@@ -19,14 +20,17 @@ const AppHeader = () => {
                     className="d-inline-block align-top"
                     style={{ marginLeft: '10px 0' }}
                 />{' '}
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="/" className='navbar-brand'>
                     Trang test layout của Thành
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
+                        <Link href='/facebook' className="nav-link">FaceBook</Link>
+                        <Link href='/youtube' className="nav-link">Youtube</Link>
+                        <Link href='/tiktok' className="nav-link">Tik Tok</Link>
+                        <Link href='/dashboard' className="nav-link">Dash Board</Link>
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
