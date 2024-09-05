@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 //import "./globals.css";
 import AppHeader from '@/app/components/app.header';
 import AppFooter from "@/app/components/app.footer";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,6 +24,7 @@ export default function RootLayout({
         <AppHeader />
         {children}
         <AppFooter />
+        <ToastContainer />
       </body>
     </html>
   );
