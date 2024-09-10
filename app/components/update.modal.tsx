@@ -61,9 +61,6 @@ function UpdateModal(props: IProps) {
                     mutate("http://localhost:8000/blogs")
                 }
             });
-
-        /*toast.success("Create success~~...")
-        console.log(">>> check data: ", title, author, content)*/
     }
 
     const handleClose = () => {

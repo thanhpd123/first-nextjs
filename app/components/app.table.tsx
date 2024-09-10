@@ -62,6 +62,7 @@ const AppTable = (props: IProps) => {
                 blog={blog}
                 setBlog={setBlog}
             />
+
         </>
     );
 }

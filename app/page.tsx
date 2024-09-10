@@ -45,5 +45,6 @@ export default function Home() {
 				blogs={data?.sort((a: any, b: any) => b.id - a.id)}
 			/>
 		</Container>
+
 	)
 }

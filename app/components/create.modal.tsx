@@ -50,8 +50,6 @@ function CreateModal(props: IProps) {
                 }
             });
 
-        /*toast.success("Create success~~...")
-        console.log(">>> check data: ", title, author, content)*/
     }
 
     const handleClose = () => {
