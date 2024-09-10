@@ -46,7 +46,7 @@ function UpdateModal(props: IProps) {
             toast.error("not empty!...")
             return
         }
-        fetch('http://localhost:8000/blogs/${id}', {
+        fetch(`http://localhost:8000/blogs/${id}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json, text/plain, */*',

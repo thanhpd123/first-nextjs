@@ -18,7 +18,7 @@ export default function Home() {
 		fetcher
 	);
 
-	if (!data) {
+	if (isLoading) {
 		return <div>loading...</div>
 	}
 
