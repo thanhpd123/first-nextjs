@@ -5,6 +5,8 @@ import { Button } from 'react-bootstrap';
 import CreateModal from './create.modal';
 import { useState } from 'react';
 import UpdateModal from './update.modal';
+import Link from 'next/link';
+
 interface IProps {
     blogs: IBlog[]
 }
@@ -38,7 +40,9 @@ const AppTable = (props: IProps) => {
                                 <td>{item.title}</td>
                                 <td>{item.author}</td>
                                 <td>
-                                    <Button>View</Button>
+
+                                    <Link className='btn btn-primary' href={`/blogs/${item.id}`}>View</Link>
+
                                     <Button variant='success' className='mx-3'
                                         onClick={() => {
                                             setBlog(item);
